@@ -21,7 +21,13 @@ warnings.filterwarnings('ignore')
 load_dotenv(find_dotenv())
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 
-llm_model = "qwen/qwen3-235b-a22b:free"
+# llm_model = "qwen/qwen3-235b-a22b:free" # Qwen 3.5 235B
+
+# llm_model = "qwen/qwen3-4b:free" # Qwen 3.5 4B
+
+llm_model = "amazon/nova-2-lite-v1:free" # Amazon Nova 2 Lite
+
+# llm_model = "mistralai/mistral-7b-instruct:free" # Mistral 7B Instruct
 
 # Use Qwen as the single primary model for this app (no failover).
 chat = ChatOpenAI(
