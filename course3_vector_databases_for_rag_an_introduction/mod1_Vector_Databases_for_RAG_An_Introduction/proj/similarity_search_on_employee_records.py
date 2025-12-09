@@ -343,6 +343,7 @@ def main():
         perform_advanced_search(collection, all_items)
         
     except Exception as error:
+        # Log the error message to the console for debugging
         print(f"An error occurred: {error}")
 
 
